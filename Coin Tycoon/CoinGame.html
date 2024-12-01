@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+    <link rel="stylesheet" href="coingame.css">
+    <title>Coin Tycoon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="invisible-container">
+            <h1>Coin Tycoon</h1>
+        </div>
+
+        <div class="invisible-container">
+            <img src="CoinGame.png" alt="coin-logo">
+        </div>
+        
+        <div class="invisible-container">
+            <button class="button" id="loginButton">Log in</button>
+            <button class="button" id="registerButton">Register</button>
+        </div>
+    </div>
+    
+    <!-- Log in -->
+    <div class="mode" id="loginMode">
+        <div class="mode-content">
+            <h2>Log in</h2>
+            <input type="text" id="loginUsername" placeholder="Username">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <button id="loginSubmit">Log In</button>
+        </div>
+    </div>
+
+    <!-- Empty account -->
+    <div class="mode" id="emptyAccount" style="display: none;">
+        <div class="mode-content">
+            <h2 id="emptyMessage"></h2>
+            <button id="emptyBttn">Okay</button>
+        </div>
+    </div>
+
+    <!-- Log in Successful -->
+    <div class="mode" id="loginSuccess" style="display: none;">
+        <div class="mode-content">
+            <h2 id="welcomeMessage"></h2>
+            <button id="okayButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Invalid username or password -->
+    <div class="mode" id="invalidBttn" style="display: none;">
+        <div class="mode-content">
+            <h2 id="invalidMessage"></h2>
+            <button id="invalidButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Register -->
+    <div class="mode" id="registerMode">
+        <div class="mode-content">
+            <h2>Register</h2>
+            <input type="text" id="registerUsername" placeholder="Username">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <button id="registerSubmit">Register</button>
+        </div>
+    </div>
+
+    <!-- Success Register -->
+    <div class="mode" id="successRegister" style="display: none;">
+        <div class="mode-content">
+            <h2 id="registerSuccess"></h2>
+            <button id="successButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Password not match -->
+    <div class="mode" id="passNotMatch" style="display: none;">
+        <div class="mode-content">
+            <h2 id="pssNotMatch"></h2>
+            <button id="notMatchButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Register username exist -->
+    <div class="mode" id="usernameExists" style="display: none;">
+        <div class="mode-content">
+            <h2 id="userExists"></h2>
+            <button id="userButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Invalid register -->
+    <div class="mode" id="invalidRegister" style="display: none;">
+        <div class="mode-content">
+            <h2 id="emptyRegisterAccount"></h2>
+            <button id="emptyButton">Okay</button>
+        </div>
+    </div>
+
+    <script src="coingame.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* General mobile styles */
+@media only screen and (max-width: 768px) {
+    body {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100vh;
+        padding: 10px;
+    }
+
+    .container {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .invisible-container {
+        height: auto;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .coin-tap {
+        width: 150px;
+        height: 150px;
+        margin-top: 20px;
+    }
+
+    .coin-tap:active {
+        width: 140px;
+        height: 150px;
+    }
+
+    .box-container {
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .box-container button {
+        width: 90%;
+        height: 40px;
+        margin: 10px auto;
+        font-size: 14px;
+    }
+
+    .buttons {
+        width: 90%;
+        height: 50px;
+        font-size: 0.8em;
+        margin: 10px auto;
+    }
+
+    .buttons:active {
+        font-size: 0.7em;
+    }
+
+    .mode-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-username {
+        font-size: 18px;
+    }
+
+    .profile-timer {
+        font-size: 14px;
+    }
+
+    .input-field {
+        font-size: 12px;
+    }
+
+    .save-button, .logout-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

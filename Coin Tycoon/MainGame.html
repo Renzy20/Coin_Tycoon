@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+    <link rel="stylesheet" href="maingame.css">
+    <link rel="stylesheet" href="upgrade.css">
+    <link rel="stylesheet" href="mobile.css">
+    <title>Coin Tycoon</title>
+</head>
+<body>
+    <div class="container">
+        <div class="invisible-container">
+            <h3 id="balance">Balance: $0.001</h3>
+        </div>
+
+        <div class="invisible-container">
+            <img id="tap-coin" src="GoldCoin.png" alt="gold-coin" class="coin-tap">
+        </div>
+
+        <div class="invisible-container">
+            <div class="box-container">
+                <button id="marketButton">Market</button>
+                <button id="upgradeButton">Upgrade</button>
+                <button id="profileButton">Profile</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile -->
+    <div class="mode" id="profileMode">
+        <div class="mode-container">
+            <img src="avatar.jpg" alt="Avatar" class="profile-avatar" id="avatar">
+            <input type="file" id="avatarInput">
+             <div class="profile-username" id="username">Username</div>
+             <div class="profile-timer" id="time-online">Time online: 0 second</div>
+
+             <div class="edit-section">
+                <input type="text" id="newUsername" class="input-field" placeholder="New Username">
+                <button class="save-button" id="saveUsername">Save Username</button>
+             </div>
+             <button class="logout-button" id="logout">Log out</button>
+        </div>
+    </div>
+
+    <!-- Log out Container -->
+    <div class="mode" id="logoutContainer" style="display: none;">
+        <div class="mode-container">
+            <h2 id="logoutMessage"></h2>
+            <button class="buttons" id="loButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Username Change Limit -->
+    <div class="mode" id="userChangeLimit" style="display: none;">
+        <div class="mode-container">
+            <h2 id="limitMessage"></h2>
+            <button id="daysButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Username updated successfully -->
+    <div class="mode" id="usernameUpdated" style="display: none;">
+        <div class="mode-container">
+            <h2 id="userUpdateMessage"></h2>
+            <button id="userUpdateButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Valid username -->
+    <div class="mode" id="validUsername" style="display: none;">
+        <div class="mode-container">
+            <h2 id="validMessage"></h2>
+            <button id="validButton">Okay</button>
+        </div>
+    </div>
+
+    <!-- Upgrade  -->
+    <div class="mode" id="upgradeMode">
+        <div class="mode-container">
+            <h2>Buy Upgrades</h2>
+            
+            <div class="upgrade-container">
+                <img src="GoldCoin.png" class="upgradeCoin">
+                <span class="textUps">+0.001</span>
+                <button class="upgradeButton" id="upgradeButton1">BUY</button>
+            </div>
+
+            <!-- 1st Buy Upgrade -->
+            <div class="mode" id="firstBuy" style="display: none;">
+                <div class="mode-container">
+                    <h3>Cost: $100</h3>
+                    <button id="purchaseButton1" class="buyButton">Purchase</button>
+                </div>
+            </div>
+
+            <div class="upgrade-container">
+                <img src="GoldCoin.png" class="upgradeCoin">
+                <span class="textUps">+0.010</span>
+                <button class="upgradeButton" id="upgradeButton2">BUY</button>
+            </div>
+
+            <!-- 2nd Buy Upgrade -->
+            <div class="mode" id="secondBuy" style="display: none;">
+                <div class="mode-container">
+                    <h3>Cost: $1000</h3>
+                    <button id="purchaseButton2" class="buyButton">Purchase</button>
+                </div>
+            </div>
+
+            <div class="upgrade-container">
+                <img src="GoldCoin.png" class="upgradeCoin">
+                <span class="textUps">+0.100</span>
+                <button class="upgradeButton" id="upgradeButton3">BUY</button>
+            </div>
+
+            <!-- 3rd Buy Upgrade -->
+            <div class="mode" id="thirdBuy" style="display: none;">
+                <div class="mode-container">
+                    <h3>Cost: $10000</h3>
+                    <button id="purchaseButton3" class="buyButton">Purchase</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Successful Purchased -->
+        <div class="mode" id="successPurchase" style="display: none;">
+            <div class="mode-container">
+                <h3 id="purchaseMessage1"></h3>
+                <button id="successButton">Okay</button>
+            </div>
+        </div>
+
+        <!-- Not Successful Purchased -->
+        <div class="mode" id="notSuccessPurchase" style="display: none;">
+            <div class="mode-container">
+                <h3 id="notSuccess"></h3>
+                <button id="notSuccessButton">Okay</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market -->
+    <div class="mode" id="marketMode">
+        <div class="mode-container mtMode">
+            <div class="card">
+                <p class="title">AUTOMINE</p>
+                <img src="automine-pickaxe.png" alt="Pickaxe and Coin" class="icon" />
+                <button class="buy-btn" id="autoBuyBttn">BUY</button>
+            </div>
+
+            <!-- Automine Buy Card -->
+            <div class="mode" id="automineBuy" style="display: none;">
+                <div class="mode-container">
+                    <h2 id="priceCost"></h2>
+                    <h4 id="desciptionText">Description: <br> +$0.500</h4>
+                    <button id="automineButton" class="buy-btn">Purchase</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="maingame.js"></script>
+</body>
+</html>
